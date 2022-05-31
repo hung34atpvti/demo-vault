@@ -1,14 +1,16 @@
 package com.example.demo;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Component;
 
 @Data
-@Configuration()
+@NoArgsConstructor
+@AllArgsConstructor
 public class Env {
-    @Value("${cre.user}")
-    private String username;
-    @Value("${cre.pass}")
-    private String password;
+    String username;
+    String password;
 }
