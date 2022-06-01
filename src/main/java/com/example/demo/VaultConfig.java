@@ -72,13 +72,15 @@ public class VaultConfig implements ApplicationContextAware {
 
         String username = (String) createdEvent.getSecrets().get("demo.username");
         String password = (String) createdEvent.getSecrets().get("demo.password");
+        String port = (String) createdEvent.getSecrets().get("demo.port");
 
-        return new Env(username, password);
+        return new Env(username, password, port);
     }
 
     private void updateEnv(Env credentials) {
         System.setProperty("demo.username", credentials.getUsername());
         System.setProperty("demo.password", credentials.getPassword());
+        System.setProperty("demo.port", credentials.getPort());
     }
 
     @Override
