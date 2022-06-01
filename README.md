@@ -55,3 +55,5 @@ Update the KV by command above.
 
 See the log and recall: **locahost:3099/env** to know how Vault work.
 
+See documentations of `spring cloud config`: https://cloud.spring.io/spring-cloud-vault/multi/multi_vault-lease-renewal.html
+
